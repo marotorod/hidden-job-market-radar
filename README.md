@@ -43,9 +43,24 @@ Most senior roles are filled through headhunters, executive search firms and net
 /plugin install hidden-job-market-radar@hidden-job-market
 ```
 
-### Skill only
+### ChatGPT
 
-Download [`skills/hidden-job-market-radar/SKILL.md`](skills/hidden-job-market-radar/SKILL.md) and add it as a skill in Claude, or copy the folder to `~/.claude/skills/`.
+1. Download **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/raw/main/dist/hidden-job-market-radar.zip)**.
+2. In ChatGPT, open **Plugins → Skills → Create → Upload from your computer** and upload the ZIP.
+3. Start a chat and say *"Set up my job search radar"*.
+
+Skills in ChatGPT depend on your plan, and if you're on a workspace, on what your admin has enabled. You can share the skill with your workspace from its **•••** menu.
+
+### Codex
+
+```
+codex plugin marketplace add marotorod/hidden-job-market-radar
+codex plugin add hidden-job-market-radar@hidden-job-market
+```
+
+### Other tools that read SKILL.md
+
+The skill follows the open [Agent Skills](https://agentskills.io) format, so it also works in tools such as Gemini CLI, GitHub Copilot or Cursor. Copy the [`skills/hidden-job-market-radar`](skills/hidden-job-market-radar) folder into that tool's skills directory, or add it as a skill in Claude by uploading the same ZIP.
 
 ## How to use it
 
@@ -117,6 +132,18 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 4. **Hidden Job Market Radar** aparecerá en tus plugins. Pulsa **+** para instalarlo y di en un chat *"Configura mi radar de empleo"*.
 
 **Claude Code**: `/plugin marketplace add marotorod/hidden-job-market-radar` y después `/plugin install hidden-job-market-radar@hidden-job-market`.
+
+**ChatGPT**:
+
+1. Descarga **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/raw/main/dist/hidden-job-market-radar.zip)**.
+2. En ChatGPT, abre **Plugins → Skills → Create → Upload from your computer** y sube el ZIP.
+3. Abre un chat y di *"Configura mi radar de empleo"*.
+
+Las skills de ChatGPT dependen de tu plan y, si usas un espacio de trabajo, de lo que haya activado tu administrador. Puedes compartir la skill con tu espacio de trabajo desde su menú **•••**.
+
+**Codex**: `codex plugin marketplace add marotorod/hidden-job-market-radar` y después `codex plugin add hidden-job-market-radar@hidden-job-market`.
+
+**Otras herramientas compatibles con SKILL.md** (Gemini CLI, GitHub Copilot, Cursor…): copia la carpeta [`skills/hidden-job-market-radar`](skills/hidden-job-market-radar) en la carpeta de skills de esa herramienta.
 
 ### Cómo usarla
 

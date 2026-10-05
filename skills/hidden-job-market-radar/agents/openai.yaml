@@ -1,0 +1,7 @@
+interface:
+  display_name: "Hidden Job Market Radar"
+  short_description: "Find the jobs that never get posted"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon.png"
+  brand_color: "#3A6FB0"
+  default_prompt: "Set up my job search radar. I'll share my CV."
