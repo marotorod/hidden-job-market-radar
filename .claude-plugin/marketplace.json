@@ -1,0 +1,22 @@
+{
+  "name": "marotorod",
+  "description": "Claude plugins by marotorod. Hidden Job Market Radar: job-search intelligence that finds the jobs that never get posted.",
+  "owner": {
+    "name": "marotorod",
+    "url": "https://github.com/marotorod"
+  },
+  "plugins": [
+    {
+      "name": "hidden-job-market-radar",
+      "source": "./",
+      "category": "productivity",
+      "tags": [
+        "job-search",
+        "hidden-job-market",
+        "executive-search",
+        "headhunters",
+        "career"
+      ]
+    }
+  ]
+}
