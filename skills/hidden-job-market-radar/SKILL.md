@@ -389,3 +389,42 @@ A header with the line format from section 10 and the marker `<!-- Add new lines
 - Be direct. Point out real gaps. Don't force rankings.
 - Apply the style preferences in `profile_and_criteria.md` to everything you write for the candidate.
 - Always prioritise: **real fit > level > ownership of the outcome > hidden market > company quality > quantity.**
+
+---
+
+## 14. Privacidad y manejo de datos
+
+- Todos los datos que el skill guarda (CV, contactos, aplicaciones, notas, etc.) permanecen exclusivamente en tu máquina, dentro de la carpeta `data/`.
+- Puedes inspeccionar, editar o eliminar esos archivos en cualquier momento.
+- Para borrar todo de forma segura, ejecuta:
+  `/skill run hidden-job-market-radar borrar_todos`
+  (te pedirá confirmación antes de proceder).
+- El skill **nunca** envía información fuera de tu entorno a menos que tú lo autorices explícitamente (por ejemplo, al aprobar un mensaje de contacto o al publicar una aplicación).
+
+## 15. Wizard de inicio rápido
+
+Si estás comenzando y no quieres configurar todos los archivos manualmente, puedes usar el wizard de tres preguntas:
+  `/skill run hidden-job-market-radar wizard`
+Este asistente te pedirá tu ubicación geográfica, rol objetivo y industria principal, y generará automáticamente los archivos básicos de configuración (`profile_and_criteria.md`, `role_taxonomy.md`, `company_universe.md`, `sources_and_strategy.md` y `config.yaml`). Después podrás refinarlos según necesites.
+
+## 16. Nuevos archivos y scripts
+
+El skill ahora utiliza varios archivos de datos y scripts auxiliares que se encuentran en el repositorio:
+
+- `data/contactos.csv` – Tu red de contactos para generar peticiones de presentación.
+- `data/señales.yaml` – Fuentes de señales tempranas (financiaciones, nombramientos, etc.).
+- `scripts/keyword_gap.sh` – Compara palabras clave de ofertas verificadas con tu CV para sugerir mejoras en tu perfil.
+- `docs/informe_ejemplo.md` – Formato esperado del informe de salida.
+- `data/referencia_puntuacion.md` – Guía con ejemplos de qué significa cada rango de puntuación.
+- `data/ats_sources.yml` – Mapeo empresa → URL pública de ATS (Greenhouse, Lever, Ashby) para evitar scraping genérico.
+- `scripts/deduplicate.sh` – Elimina duplicados inteligentes por empresa + puesto + ubicación.
+- `data/config.yaml` – Configuración de antigüedad máxima de ofertas (días).
+- `data/aplicaciones.csv` – Registro de fases de candidatura (enviada, entrevista, oferta, rechazada).
+- `templates/entrevista.md` – Plantilla para preparar entrevistas basada en tu CV y la oferta.
+- `data/rangos_salariales.csv` – Rangos salariales de referencia por puesto, nivel y ubicación para ayudar en la negociación.
+
+Además, se han añadido los siguientes subcomandos (ejemplos):
+- `/skill run hidden-job-market-radar aplicar --id <id> --estado entrevista --notas "texto"` – Registra una candidatura y su estado.
+- `/skill run hidden-job-market-radar lista` – Muestra el registro de aplicaciones.
+- `/skill run hidden-job-market-radar recordatorio` – Envía notificaciones de seguimiento para candidaturas sin actualización reciente.
+- `/skill run hidden-job-market-radar borrar_todos` – Elimina todos los datos guardados en `data/` (pregá confirmación).

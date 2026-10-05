@@ -1,0 +1,2 @@
+# Número máximo de días que una oferta puede tener desde su fecha de publicación
+max_offer_age_days: 30
