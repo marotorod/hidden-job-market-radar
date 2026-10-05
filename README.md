@@ -1,3 +1,5 @@
+<img src=".claude-plugin/icon.png" alt="Hidden Job Market Radar logo" width="120" align="right">
+
 # Hidden Job Market Radar
 
 **Find the jobs that never get posted.** A Claude skill and plugin for senior and executive job seekers.
@@ -56,15 +58,15 @@ The radar keeps its memory in plain Markdown files in your workspace, so you can
 
 | File | Purpose |
 |---|---|
-| `perfil_y_criterios.md` | Fixed facts, positioning, target roles, sectors, compensation, geography, scoring |
-| `taxonomia_roles.md` | Role families and equivalent titles |
-| `universo_empresas.md` | Target, adjacent and discovery companies by priority |
-| `fuentes_y_estrategia.md` | Sources, routes and effort budget |
-| `registro_ofertas.md` | Every job reviewed |
-| `registro_recruiters.md` | Firms, partners, mandates and contact routes |
-| `registro_aprendizaje.md` | What worked, what failed and what to change next run |
+| `profile_and_criteria.md` | Fixed facts, positioning, target roles, sectors, compensation, geography, scoring |
+| `role_taxonomy.md` | Role families and equivalent titles |
+| `company_universe.md` | Target, adjacent and discovery companies by priority |
+| `sources_and_strategy.md` | Sources, routes and effort budget |
+| `jobs_log.md` | Every job reviewed |
+| `recruiters_log.md` | Firms, partners, mandates and contact routes |
+| `learning_log.md` | What worked, what failed and what to change next run |
 
-> The skill is written in Spanish and talks to you in your own language. File names and the report subject are in Spanish.
+> The radar talks to you in your own language, and writes application materials in the language of each posting.
 
 ## Works best with
 
