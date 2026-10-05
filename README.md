@@ -1,3 +1,5 @@
+<img src=".claude-plugin/icon.png" alt="Hidden Job Market Radar logo" width="120" align="right">
+
 # Hidden Job Market Radar
 
 **Find the jobs that never get posted.** A Claude skill and plugin for senior and executive job seekers.
