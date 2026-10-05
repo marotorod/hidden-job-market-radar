@@ -169,6 +169,12 @@ Las skills de ChatGPT dependen de tu plan y, si usas un espacio de trabajo, de l
 - "Prepárame para esta entrevista"
 - "Borra todos los datos de mi radar"
 
+## Privacy
+
+The plugin has no servers or tracking: your data stays in your own workspace, and nothing is sent to anyone without your explicit OK. Read the full [Privacy Policy](PRIVACY.md).
+
+*Privacidad: el plugin no tiene servidores ni seguimiento; tus datos se quedan en tu espacio de trabajo. Lee la [política de privacidad](PRIVACY.md#política-de-privacidad).*
+
 ---
 
 ## License
