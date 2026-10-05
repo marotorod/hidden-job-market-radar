@@ -15,6 +15,8 @@ Most senior roles are filled through headhunters, executive search firms and net
 - 🎯 **Scored by real fit.** A 0–100 score against your CV, separating direct from transferable experience.
 - 🕵️ **Hidden job market.** Maps headhunters, executive search firms, mandates and market signals.
 - 💶 **Total compensation.** Base, bonus and benefits, not just the headline salary.
+- 🤝 **Your own network and hiring signals.** Spots funding rounds, leadership changes and expansions before roles are posted, and where a contact of yours can introduce you.
+- 📋 **Pipeline and interviews.** Tracks your applications, reminds you to follow up and prepares interview briefs.
 - 🧠 **Learns between runs.** Remembers which sources, ATS and queries actually work for you.
 - 🔒 **Safe by design.** Never invents experience. Never applies, sends your CV or contacts anyone without your explicit OK.
 
@@ -74,12 +76,16 @@ Just talk to Claude:
 | "Compare these two offers" | Side-by-side total compensation and fit |
 | "Map executive search firms for fintech in Spain" | Firms, partners, mandates and draft outreach messages (never sent) |
 | "Prepare my application for this role" | Tailored CV and cover letter, only for roles you authorise |
+| "Who in my network works at these companies?" | Matches your contacts with openings and hiring signals and drafts introduction requests (never sent) |
+| "Log this application as interview" | Updates your pipeline and reminds you of follow-ups |
+| "Prepare me for this interview" | Interview brief with stories from your CV, likely questions and questions to ask |
+| "Delete all my radar data" | Lists the files, asks you to confirm, then deletes them |
 
 The radar can run on a schedule (weekly is recommended) and send you a report.
 
 ## What it creates
 
-The radar keeps its memory in plain Markdown files in your workspace, so you can read and edit them:
+The radar keeps its memory in plain Markdown and CSV files in your own workspace, so you can read, edit or delete them at any time:
 
 | File | Purpose |
 |---|---|
@@ -90,6 +96,9 @@ The radar keeps its memory in plain Markdown files in your workspace, so you can
 | `jobs_log.md` | Every job reviewed |
 | `recruiters_log.md` | Firms, partners, mandates and contact routes |
 | `learning_log.md` | What worked, what failed and what to change next run |
+| `contacts.csv` | Your own network, only what you choose to share (optional) |
+| `applications.csv` | Your application pipeline and follow-ups |
+| `salary_benchmarks.csv` | Salary references, each with its source and date |
 
 > The radar talks to you in your own language, and writes application materials in the language of each posting.
 
@@ -119,6 +128,8 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 - 🎯 **Puntuación por encaje real** (0–100) con tu CV, distinguiendo experiencia directa de transferible.
 - 🕵️ **Mercado oculto**: headhunters, firmas de Executive Search, mandatos y señales de mercado.
 - 💶 **Compensación total**: fijo, variable y beneficios, no solo el salario publicado.
+- 🤝 **Tu red y señales de contratación**: detecta rondas de financiación, cambios de dirección y expansiones antes de que se publique el puesto, y dónde un contacto tuyo puede presentarte.
+- 📋 **Candidaturas y entrevistas**: sigue tus candidaturas, te recuerda hacer seguimiento y prepara entrevistas.
 - 🧠 **Aprende entre ejecuciones**: qué fuentes, ATS y búsquedas funcionan en tu caso.
 - 🔒 **Segura**: no inventa experiencia y no envía candidaturas ni contacta con nadie sin tu autorización explícita.
 
@@ -153,6 +164,10 @@ Las skills de ChatGPT dependen de tu plan y, si usas un espacio de trabajo, de l
 - "Compara estas dos ofertas"
 - "Mapea firmas de Executive Search del sector X"
 - "Prepara mi candidatura para esta oferta"
+- "¿Quién de mi red trabaja en estas empresas?"
+- "Apunta esta candidatura como entrevista"
+- "Prepárame para esta entrevista"
+- "Borra todos los datos de mi radar"
 
 ---
 
