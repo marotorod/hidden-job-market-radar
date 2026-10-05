@@ -20,11 +20,21 @@ Most senior roles are filled through headhunters, executive search firms and net
 
 ## Install
 
-### Claude app (claude.ai / Cowork)
+### Claude app (claude.ai / Cowork), no code needed
 
-1. Open **Customize → Plugins** and click **Add → Add marketplace**.
-2. Choose **Add from a repository** and enter `marotorod/hidden-job-market-radar`.
-3. Install **Hidden Job Market Radar** from the new marketplace.
+**1.** Open **Customize → Plugins**, click **Add** and choose **Add marketplace**.
+
+<img src="docs/images/install-1-add-marketplace.png" alt="Customize → Plugins → Add → Add marketplace" width="700">
+
+**2.** Choose **Add from a repository**.
+
+<img src="docs/images/install-2-add-from-repository.png" alt="Add marketplace dialog with the Add from a repository option" width="600">
+
+**3.** Paste `https://github.com/marotorod/hidden-job-market-radar` in **URL**, leave **Sync automatically** on to get updates, and click **Sync**.
+
+<img src="docs/images/install-3-paste-url-and-sync.png" alt="Repository URL pasted with Sync automatically on, ready to click Sync" width="600">
+
+**4.** **Hidden Job Market Radar** now appears in your plugins. Click **+** to install it, then start a chat and say *"Set up my job search radar"*.
 
 ### Claude Code
 
@@ -99,8 +109,14 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 
 ### Instalación
 
-- **App de Claude (claude.ai / Cowork)**: *Personalización → Plugins → Añadir → Añadir marketplace → Añadir desde un repositorio* y escribe `marotorod/hidden-job-market-radar`.
-- **Claude Code**: `/plugin marketplace add marotorod/hidden-job-market-radar` y después `/plugin install hidden-job-market-radar@hidden-job-market`.
+**App de Claude (claude.ai / Cowork), sin código** (las capturas están [más arriba](#claude-app-claudeai--cowork-no-code-needed)):
+
+1. Abre **Personalización → Plugins**, pulsa **Añadir** y elige **Añadir marketplace**.
+2. Elige **Añadir desde un repositorio**.
+3. Pega `https://github.com/marotorod/hidden-job-market-radar` en **URL**, deja activada la sincronización automática para recibir actualizaciones y pulsa **Sincronizar** (*Sync*).
+4. **Hidden Job Market Radar** aparecerá en tus plugins. Pulsa **+** para instalarlo y di en un chat *"Configura mi radar de empleo"*.
+
+**Claude Code**: `/plugin marketplace add marotorod/hidden-job-market-radar` y después `/plugin install hidden-job-market-radar@hidden-job-market`.
 
 ### Cómo usarla
 
