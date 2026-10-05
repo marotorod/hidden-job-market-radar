@@ -1,0 +1,41 @@
+{
+  "name": "hidden-job-market-radar",
+  "version": "1.2.0",
+  "description": "Job-search intelligence for senior professionals. Maps headhunters, executive search mandates and the hidden job market, verifies and scores openings by real fit with your CV, and learns from every run. Never invents experience; never applies or contacts anyone without your OK.",
+  "author": {
+    "name": "Hidden Job Market Radar"
+  },
+  "license": "MIT",
+  "keywords": [
+    "job-search",
+    "hidden-job-market",
+    "executive-search",
+    "headhunters",
+    "career",
+    "recruiting",
+    "salary",
+    "job-hunting"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hidden Job Market Radar",
+    "shortDescription": "Find the jobs that never get posted.",
+    "longDescription": "A personal job-search intelligence system for senior professionals. It maps headhunters, executive search mandates and the hidden job market, verifies every opening against the real posting, scores it by real fit with your CV, compares total compensation and learns from every run. It never invents experience and never applies or contacts anyone without your explicit OK.",
+    "developerName": "Hidden Job Market Radar",
+    "category": "Productivity",
+    "capabilities": [
+      "Research",
+      "Writing"
+    ],
+    "defaultPrompt": [
+      "Set up my job search radar. I'll share my CV.",
+      "Run my job search radar.",
+      "Is this role a good fit for me?"
+    ],
+    "websiteURL": "https://github.com/marotorod/hidden-job-market-radar",
+    "brandColor": "#3A6FB0",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": []
+  }
+}
