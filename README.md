@@ -30,7 +30,7 @@ Most senior roles are filled through headhunters, executive search firms and net
 
 ```
 /plugin marketplace add marotorod/hidden-job-market-radar
-/plugin install hidden-job-market-radar@marotorod
+/plugin install hidden-job-market-radar@hidden-job-market
 ```
 
 ### Skill only
@@ -100,7 +100,7 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 ### Instalación
 
 - **App de Claude (claude.ai / Cowork)**: *Personalización → Plugins → Añadir → Añadir marketplace → Añadir desde un repositorio* y escribe `marotorod/hidden-job-market-radar`.
-- **Claude Code**: `/plugin marketplace add marotorod/hidden-job-market-radar` y después `/plugin install hidden-job-market-radar@marotorod`.
+- **Claude Code**: `/plugin marketplace add marotorod/hidden-job-market-radar` y después `/plugin install hidden-job-market-radar@hidden-job-market`.
 
 ### Cómo usarla
 
@@ -115,4 +115,4 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 
 ## License
 
-[MIT](LICENSE) © marotorod
+[MIT](LICENSE)
