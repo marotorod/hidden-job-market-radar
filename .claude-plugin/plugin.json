@@ -1,13 +1,17 @@
 {
   "name": "hidden-job-market-radar",
   "displayName": "Hidden Job Market Radar",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Job-search intelligence for senior professionals. Maps headhunters, executive search mandates and the hidden job market, verifies and scores openings by real fit with your CV, and learns from every run. Never invents experience; never applies or contacts anyone without your OK.",
   "author": {
     "name": "Hidden Job Market Radar"
   },
   "license": "MIT",
+  "homepage": "https://github.com/marotorod/hidden-job-market-radar#readme",
+  "documentationUrl": "https://github.com/marotorod/hidden-job-market-radar#readme",
+  "supportUrl": "https://github.com/marotorod/hidden-job-market-radar/issues",
   "privacyPolicyUrl": "https://github.com/marotorod/hidden-job-market-radar/blob/main/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/marotorod/hidden-job-market-radar/blob/main/TERMS.md",
   "keywords": [
     "job-search",
     "hidden-job-market",
