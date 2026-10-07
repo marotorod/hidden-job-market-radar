@@ -1,0 +1,40 @@
+name: Skill packages
+
+# Builds the ChatGPT ZIP and the Claude .skill file from skills/ and publishes
+# them as assets of the "skill-latest" release, so no archives live in the
+# repository (the plugin directory can't inspect them).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "scripts/build-skill-zip.sh"
+      - ".github/workflows/skill-packages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build packages
+        run: sh scripts/build-skill-zip.sh
+
+      - name: Publish to the skill-latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(jq -r .version .claude-plugin/plugin.json)
+          notes="Skill packages for version ${version}, built from ${GITHUB_SHA}.
+
+          - hidden-job-market-radar.zip: upload to ChatGPT (Plugins > Skills > Create > Upload from your computer).
+          - hidden-job-market-radar.skill: upload to Claude as a standalone skill."
+          if ! gh release view skill-latest >/dev/null 2>&1; then
+            gh release create skill-latest --title "Skill packages" --notes "$notes" --target "$GITHUB_SHA"
+          fi
+          gh release upload skill-latest dist/hidden-job-market-radar.zip dist/hidden-job-market-radar.skill --clobber
+          gh release edit skill-latest --notes "$notes"
