@@ -60,9 +60,13 @@ codex plugin marketplace add marotorod/hidden-job-market-radar
 codex plugin add hidden-job-market-radar@hidden-job-market
 ```
 
+### Claude, as a standalone skill
+
+If you prefer a skill to the plugin, download **[hidden-job-market-radar.skill](https://github.com/marotorod/hidden-job-market-radar/raw/main/dist/hidden-job-market-radar.skill)** and upload it in Claude under **Customize → Skills**. If you installed an earlier version of this skill (for example `career-intelligence-radar`), remove it first so only one version runs.
+
 ### Other tools that read SKILL.md
 
-The skill follows the open [Agent Skills](https://agentskills.io) format, so it also works in tools such as Gemini CLI, GitHub Copilot or Cursor. Copy the [`skills/hidden-job-market-radar`](skills/hidden-job-market-radar) folder into that tool's skills directory, or add it as a skill in Claude by uploading the same ZIP.
+The skill follows the open [Agent Skills](https://agentskills.io) format, so it also works in tools such as Gemini CLI, GitHub Copilot or Cursor. Copy the [`skills/hidden-job-market-radar`](skills/hidden-job-market-radar) folder into that tool's skills directory.
 
 ## How to use it
 
@@ -153,6 +157,8 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 Las skills de ChatGPT dependen de tu plan y, si usas un espacio de trabajo, de lo que haya activado tu administrador. Puedes compartir la skill con tu espacio de trabajo desde su menú **•••**.
 
 **Codex**: `codex plugin marketplace add marotorod/hidden-job-market-radar` y después `codex plugin add hidden-job-market-radar@hidden-job-market`.
+
+**Claude, como skill independiente**: descarga **[hidden-job-market-radar.skill](https://github.com/marotorod/hidden-job-market-radar/raw/main/dist/hidden-job-market-radar.skill)** y súbelo en Claude en **Personalización → Skills**. Si tenías una versión anterior (por ejemplo `career-intelligence-radar`), elimínala antes para que solo funcione una.
 
 **Otras herramientas compatibles con SKILL.md** (Gemini CLI, GitHub Copilot, Cursor…): copia la carpeta [`skills/hidden-job-market-radar`](skills/hidden-job-market-radar) en la carpeta de skills de esa herramienta.
 
