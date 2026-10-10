@@ -1,6 +1,6 @@
 ---
 name: "hidden-job-market-radar"
-description: "Personal job-search radar focused on the hidden job market. Builds the candidate's profile from their CV, finds job openings, verifies them against the real posting and scores them by genuine fit, maps headhunters, executive search firms, hiring signals and the candidate's own network, tracks applications, prepares interviews, analyses total compensation and learns between runs. Use it when the user wants to look for a job, run or schedule their job-search radar, evaluate or compare job offers or a compensation package, map recruiters or warm introductions, log or review their applications, or prepare an application or interview. Examples: 'find me jobs', 'run the radar', 'is this role a good fit?', 'compare these two offers', 'who in my network works at X?', 'log this application as interview', 'prepare me for this interview'."
+description: "Personal job-search radar focused on the hidden job market. Builds the candidate's profile from their CV, finds job openings, verifies them against the real posting and scores them by genuine fit, maps headhunters, executive search firms, hiring signals and the candidate's own network, tracks applications, tailors ATS-ready CVs and LinkedIn profiles, prepares and rehearses interviews, analyses and negotiates offers, and learns between runs. Use it when the user wants to look for a job, run or schedule their job-search radar, evaluate or compare job offers or a compensation package, map recruiters or warm introductions, log or review their applications, or prepare an application or interview. Examples: 'find me jobs', 'run the radar', 'is this role a good fit?', 'compare these two offers', 'who in my network works at X?', 'log this application as interview', 'prepare me for this interview', 'run a practice interview', 'rewrite my LinkedIn headline', 'help me negotiate this offer'."
 ---
 
 # Hidden Job Market Radar
@@ -24,8 +24,10 @@ Detect the mode from the request and the state of the workspace:
 | EVALUATE | A specific opening, comparing two offers, reviewing a compensation package | Verification + filters + scoring + total compensation |
 | CONTACTS | Map recruiters, headhunters, firms or warm introductions | Sections 9 and 9A, messages drafted but not sent |
 | PIPELINE | "Log this application", "what's the status of my applications?" | Section 10A |
-| PREPARE | The candidate authorises a specific application | Tailored CV, cover letter and answers, in the language of the posting (section 10C) |
-| INTERVIEW | The candidate has an interview for a specific role | Section 10B |
+| PREPARE | The candidate authorises a specific application | Tailored ATS-ready CV, cover letter and answers, in the language of the posting (section 10C) |
+| PROFILE | "Update my LinkedIn", "refresh my CV" | Profile and CV drafts from the positioning and the playbook (section 10C) |
+| INTERVIEW | An interview for a specific role, practice, or a debrief afterwards | Section 10B |
+| OFFER | An offer to assess or negotiate | Section 10E |
 | DATA | "Show / export / delete my radar data" | Section 14 |
 
 If the files are missing and the request is RADAR or EVALUATE, run the quick start first (section 4.0) and then continue.
@@ -74,6 +76,7 @@ Store them wherever the candidate's work lives: the Project documents if the ses
 | `salary_benchmarks.csv` | Salary references with source, URL and date (section 5.6) |
 | `market_demand.csv` | Requirements employers ask for in FIT, NEAR and applied openings, and the candidate's coverage (section 10D) |
 | `content_playbook.md` | What employers ask for, what to lead with, proposed truthful CV and LinkedIn edits, and what's working (section 10D) |
+| `story_bank.md` | Reusable STAR+R interview stories from the evidence bank (section 10B) |
 
 Templates for every file: `references/file_templates.md`.
 
@@ -336,11 +339,15 @@ A route that failed is not retried blindly: look for another valid surface and, 
 
 ### 10B. Interview preparation
 
-When the candidate has an interview, build a brief from the verified posting, the company's recent public news, hiring signals, the candidate's evidence bank and `profile_and_criteria.md`, using `references/interview_prep.md`. Use only achievements from the CV. Mark anything about the company you couldn't verify.
+When the candidate has an interview, build a brief from the verified posting, the company's recent public news, hiring signals, the candidate's evidence bank, `story_bank.md` and `profile_and_criteria.md`, using `references/interview_prep.md`. Use only achievements from the CV. Mark anything about the company you couldn't verify.
+
+The same reference covers the story bank, practice interviews (one question at a time, with feedback) and the debrief after a real interview, which feeds `applications.csv`, the story bank and the playbook.
 
 ### 10C. Application materials (PREPARE)
 
-Only for an application the candidate authorised. Follow section 5 of `references/market_learning.md`: order the CV and cover letter by what this posting asks for first, use the employer's vocabulary only where the CV supports it, never imply a missing requirement, write in the language of the posting, and list every change against the master CV so the candidate can check it. Name the `cv_version` and `angle` so the outcome can be learned from.
+Only for an application the candidate authorised. Follow section 5 of `references/market_learning.md` for the content and `references/cv_and_linkedin.md` for the ATS-safe format, the file and the checks: order the CV and cover letter by what this posting asks for first, use the employer's vocabulary only where the CV supports it, never imply a missing requirement, write in the language of the posting, and list every change against the master CV so the candidate can check it. Name the `cv_version` and `angle` so the outcome can be learned from.
+
+PROFILE mode drafts the LinkedIn headline, About, experience and skills, and a refreshed master-CV proposal, with the same rules (`references/cv_and_linkedin.md`, section 4). The candidate makes every change themselves.
 
 ### 10D. Market learning
 
@@ -350,6 +357,10 @@ The radar learns what employers in the candidate's target roles ask for and whic
 - At the end of a run, recompute the patterns (at least 3 openings from 2 companies) and the response rates by angle, CV version and channel (at least 5 applications per variant before comparing), and update `content_playbook.md`.
 - Proposed CV and LinkedIn edits only surface or reword what the CV already supports. Only the candidate edits the master CV.
 - The learning is advisory: it never changes the scoring on its own.
+
+### 10E. Offers and negotiation
+
+When the candidate has an offer, follow `references/negotiation.md`: total compensation table (guaranteed vs potential), comparison with target, walk-away and benchmarks, a ranked ask with real leverage only, a counter-proposal and call script (drafted, not sent), and a contract checklist turned into questions for a lawyer. Never suggest inventing a competing offer.
 
 ---
 

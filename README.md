@@ -16,7 +16,7 @@ Most senior roles are filled through headhunters, executive search firms and net
 - 🕵️ **Hidden job market.** Maps headhunters, executive search firms, mandates and market signals.
 - 💶 **Total compensation.** Base, bonus and benefits, not just the headline salary.
 - 🤝 **Your own network and hiring signals.** Spots funding rounds, leadership changes and expansions before roles are posted, and where a contact of yours can introduce you.
-- 📋 **Pipeline and interviews.** Tracks your applications, reminds you to follow up and prepares interview briefs.
+- 📋 **Pipeline, CVs and interviews.** Tracks your applications, tailors ATS-ready CVs and your LinkedIn profile, prepares and rehearses interviews, and helps you negotiate the offer.
 - 🧠 **Learns between runs.** Remembers which sources, ATS and queries work for you, what employers in your target roles keep asking for, and which way of presenting your real experience gets replies.
 - 🔒 **Safe by design.** Never invents experience. Never applies, sends your CV or contacts anyone without your explicit OK.
 
@@ -83,8 +83,8 @@ If your account doesn't have Skills yet, a Gem can run the radar:
 
 1. Download and unzip **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)**.
 2. In Gemini, open **Gems → New Gem** and name it *Hidden Job Market Radar*.
-3. In **Instructions**, write: *"Follow SKILL.md from your knowledge files exactly. Read the files in references/ only when SKILL.md says so."*
-4. In **Knowledge**, upload `SKILL.md` and the 8 files in `references/`.
+3. In **Instructions**, paste the full content of `SKILL.md`.
+4. In **Knowledge**, upload the 10 files in `references/` (a Gem accepts up to 10).
 5. Save, open the Gem and say *"Set up my job search radar"*.
 
 ### Claude, as a standalone skill
@@ -110,6 +110,9 @@ Just talk to Claude:
 | "Who in my network works at these companies?" | Matches your contacts with openings and hiring signals and drafts introduction requests (never sent) |
 | "Log this application as interview" | Updates your pipeline and reminds you of follow-ups |
 | "Prepare me for this interview" | Interview brief with stories from your CV, likely questions and questions to ask |
+| "Run a practice interview" | Mock interview, one question at a time, with feedback on each answer |
+| "Rewrite my LinkedIn profile" | Headline, About and skills drafted from your CV and what employers ask for |
+| "Help me negotiate this offer" | Total compensation, a ranked ask, a counter-proposal draft and a contract checklist |
 | "Delete all my radar data" | Lists the files, asks you to confirm, then deletes them |
 
 The radar can run on a schedule (weekly is recommended) and send you a report.
@@ -132,6 +135,7 @@ The radar keeps its memory in plain Markdown and CSV files in your own workspace
 | `salary_benchmarks.csv` | Salary references, each with its source and date |
 | `market_demand.csv` | What employers ask for in the roles that fit you, in their own words, and how well your CV shows it |
 | `content_playbook.md` | What to lead with, truthful CV and LinkedIn edits to consider, real gaps, and which angles get replies |
+| `story_bank.md` | Your interview stories, built from your CV and improved after each practice and interview |
 
 > The radar talks to you in your own language, and writes application materials in the language of each posting.
 
@@ -162,7 +166,7 @@ La mayoría de los puestos senior se cubren a través de headhunters, firmas de 
 - 🕵️ **Mercado oculto**: headhunters, firmas de Executive Search, mandatos y señales de mercado.
 - 💶 **Compensación total**: fijo, variable y beneficios, no solo el salario publicado.
 - 🤝 **Tu red y señales de contratación**: detecta rondas de financiación, cambios de dirección y expansiones antes de que se publique el puesto, y dónde un contacto tuyo puede presentarte.
-- 📋 **Candidaturas y entrevistas**: sigue tus candidaturas, te recuerda hacer seguimiento y prepara entrevistas.
+- 📋 **Candidaturas, CV y entrevistas**: sigue tus candidaturas, adapta tu CV (legible por los ATS) y tu perfil de LinkedIn, prepara y ensaya entrevistas y te ayuda a negociar la oferta.
 - 🧠 **Aprende entre ejecuciones**: qué fuentes, ATS y búsquedas funcionan en tu caso, qué piden una y otra vez las empresas para tus puestos objetivo y qué forma de presentar tu experiencia real consigue respuestas.
 - 🔒 **Segura**: no inventa experiencia y no envía candidaturas ni contacta con nadie sin tu autorización explícita.
 
@@ -202,8 +206,8 @@ La app de Gemini no guarda archivos entre chats: al final de cada sesión el rad
 
 1. Descarga y descomprime **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)**.
 2. En Gemini, abre **Gems → Nuevo Gem** y llámalo *Hidden Job Market Radar*.
-3. En **Instrucciones**, escribe: *"Sigue al pie de la letra SKILL.md de tus archivos de conocimiento. Lee los archivos de references/ solo cuando SKILL.md lo indique."*
-4. En **Conocimiento**, sube `SKILL.md` y los 8 archivos de `references/`.
+3. En **Instrucciones**, pega el contenido completo de `SKILL.md`.
+4. En **Conocimiento**, sube los 10 archivos de `references/` (un Gem admite hasta 10).
 5. Guarda, abre el Gem y di *"Configura mi radar de empleo"*.
 
 **Claude, como skill independiente**: descarga **[hidden-job-market-radar.skill](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.skill)** y súbelo en Claude en **Personalización → Skills**. Si tenías una versión anterior (por ejemplo `career-intelligence-radar`), elimínala antes para que solo funcione una.
@@ -221,6 +225,9 @@ La app de Gemini no guarda archivos entre chats: al final de cada sesión el rad
 - "¿Quién de mi red trabaja en estas empresas?"
 - "Apunta esta candidatura como entrevista"
 - "Prepárame para esta entrevista"
+- "Hazme una entrevista de práctica"
+- "Reescribe mi perfil de LinkedIn"
+- "Ayúdame a negociar esta oferta"
 - "Borra todos los datos de mi radar"
 
 ## Privacy

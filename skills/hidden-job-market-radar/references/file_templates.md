@@ -149,6 +149,25 @@ Last updated: [date] | Based on [N] openings and [M] applications
 
 Start with the header lines and `PENDING` sections until there are patterns.
 
+## `story_bank.md`
+
+```markdown
+# Story bank
+## [Short title]
+- Themes: [growth | turnaround | conflict | failure | leading change | building a team | ...]
+- Proves (market_demand requirements):
+- Source in CV:
+- Situation:
+- Task:
+- Action (the candidate's own):
+- Result (CV figure):
+- Reflection:
+- 60-second version:
+- Used in: [date, company, how it landed]
+```
+
+Fill the situation, action and reflection only with what the candidate tells you.
+
 ## `salary_benchmarks.csv`
 
 ```csv
