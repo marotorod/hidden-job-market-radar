@@ -111,10 +111,43 @@ Leave `email` empty unless the candidate provides it.
 ## `applications.csv`
 
 ```csv
-id,company,role,canonical_url,source,date_found,date_applied,stage,contact,next_step,next_step_date,last_update,notes
+id,company,role,canonical_url,source,date_found,date_applied,stage,contact,next_step,next_step_date,last_update,cv_version,angle,channel,outcome_reason,notes
 ```
 
-`stage` is one of: considering, applied, screening, interview, final, offer, accepted, rejected, withdrawn.
+`stage` is one of: considering, applied, screening, interview, final, offer, accepted, rejected, withdrawn. `channel` is one of: direct, referral, recruiter, executive_search.
+
+If an existing `applications.csv` lacks `cv_version`, `angle`, `channel` or `outcome_reason`, add the columns (empty for old rows) without touching the existing data.
+
+## `market_demand.csv`
+
+```csv
+date,canonical_url,company,role_family,score,requirement,employer_wording,type,priority,cv_evidence,coverage
+```
+
+`type` is one of: outcome, capability, domain, leadership, tool, credential, language. `priority` is `must` or `nice`. `coverage` is `shown`, `buried` or `missing`. See `market_learning.md`.
+
+## `content_playbook.md`
+
+```markdown
+# Content playbook
+Last updated: [date] | Based on [N] openings and [M] applications
+
+## [Role family]
+### What they ask for
+| Requirement | Frequency | Must rate | Employer wording | Coverage |
+|---|---|---|---|---|
+
+### Vocabulary (employer term | candidate's term | supported by)
+### Lead with
+### Proposed CV and LinkedIn edits
+| Pattern | Proposed text | Source line in CV | Status (proposed/accepted/rejected) |
+|---|---|---|---|
+
+### Real gaps
+### What's working (angle / CV version / channel: applications, reply rate, interview rate)
+```
+
+Start with the header lines and `PENDING` sections until there are patterns.
 
 ## `salary_benchmarks.csv`
 

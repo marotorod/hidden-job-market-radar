@@ -24,7 +24,7 @@ Detect the mode from the request and the state of the workspace:
 | EVALUATE | A specific opening, comparing two offers, reviewing a compensation package | Verification + filters + scoring + total compensation |
 | CONTACTS | Map recruiters, headhunters, firms or warm introductions | Sections 9 and 9A, messages drafted but not sent |
 | PIPELINE | "Log this application", "what's the status of my applications?" | Section 10A |
-| PREPARE | The candidate authorises a specific application | Tailored CV, cover letter and answers, in the language of the posting |
+| PREPARE | The candidate authorises a specific application | Tailored CV, cover letter and answers, in the language of the posting (section 10C) |
 | INTERVIEW | The candidate has an interview for a specific role | Section 10B |
 | DATA | "Show / export / delete my radar data" | Section 14 |
 
@@ -72,6 +72,8 @@ Store them wherever the candidate's work lives: the Project documents if the ses
 | `contacts.csv` | The candidate's own network, only what they provide (section 9A) |
 | `applications.csv` | Application pipeline (section 10A) |
 | `salary_benchmarks.csv` | Salary references with source, URL and date (section 5.6) |
+| `market_demand.csv` | Requirements employers ask for in FIT, NEAR and applied openings, and the candidate's coverage (section 10D) |
+| `content_playbook.md` | What employers ask for, what to lead with, proposed truthful CV and LinkedIn edits, and what's working (section 10D) |
 
 Templates for every file: `references/file_templates.md`.
 
@@ -205,7 +207,7 @@ Create a task list with the phases. In a scheduled run, don't ask questions: app
 At executive level, assume a significant part of the market is never published.
 
 ### Phase 0. Load memory
-Read the logs, `applications.csv` and `contacts.csv`. Don't start from scratch. Use the history to deduplicate, detect reopenings, recognise recruiters, avoid failed routes, skip roles already applied for and prioritise productive sources.
+Read the logs, `applications.csv`, `contacts.csv` and `content_playbook.md`. Don't start from scratch. Use the history to deduplicate, detect reopenings, recognise recruiters, avoid failed routes, skip roles already applied for and prioritise productive sources.
 
 ### Phase 1. Inbox and trackers
 - If there is an email connector and an alert label has been defined, review the last 7 days: extract openings, URLs, companies, recruiters, repeated alerts.
@@ -231,8 +233,8 @@ Generalist job aggregators and connectors: at most one query per source per run 
 ### Phase 7. Web discovery
 Searches with variations of the role taxonomy, sector and geography to discover roles, firms, partners, careers pages, ATS, mandates and signals. Vary the queries based on accumulated learning and log the useful ones.
 
-### Phase 8. Verify, score, log, report
-Sections 7, 5.5, 10 and 8.
+### Phase 8. Verify, score, log, learn, report
+Sections 7, 5.5, 10, 10D and 8.
 
 ### Expanding the universe
 An unlisted company with a comparable model and scale: classify it as DISCOVERY. With an opening scoring >=70, repeated signals or structural affinity, propose promoting it to ADJACENT TARGET. Never discard an excellent opportunity because the company wasn't on the list.
@@ -265,7 +267,7 @@ Sections:
 4. **Reopenings and adjustments**, if any.
 5. **Mandates, signals and contacts**: search signals, hiring signals, partners, warm-introduction opportunities, contact routes and prepared messages (not sent).
 6. **Applications**: follow-ups due and stage changes (section 10A).
-7. **What the market is hiring for**: observed patterns. A single observation is not a trend. When the same requirements keep appearing in FIT and NEAR openings, list them and say whether the CV already shows them, so the candidate can make truthful updates to their CV and LinkedIn profile.
+7. **What the market is hiring for**: patterns from `market_demand.csv` across runs, not just this one (section 10D): frequency, the candidate's coverage, new or fading patterns, proposed CV and LinkedIn edits still pending, real gaps, and what's working once the samples allow it.
 8. **Excluded**: grouped by reason, without dumping noise.
 9. **Coverage**: sources with and without results, failures, cohort reviewed, new routes and ATS, new companies, changes for the next run.
 
@@ -328,12 +330,26 @@ A route that failed is not retried blindly: look for another valid surface and, 
 `applications.csv` tracks every application the candidate makes. Stages: `considering`, `applied`, `screening`, `interview`, `final`, `offer`, `accepted`, `rejected`, `withdrawn`.
 
 - When the candidate says they applied or a stage changed, add or update the row (date, stage, contact, next step, next-step date, notes). Never mark a stage the candidate didn't confirm.
+- Record the `cv_version`, `angle` and `channel` used, and the `outcome_reason` when there is a rejection or a stage reached: they feed section 10D. After an interview, ask for a short debrief (questions that caught them out, concerns raised) and add it to `notes`.
 - In each RADAR run, list in the report the applications with no update for more than 10 days (or the cadence the candidate set) and suggest a follow-up, drafted but not sent.
 - Don't recommend openings that are already in the pipeline; report changes to them as reopenings.
 
 ### 10B. Interview preparation
 
 When the candidate has an interview, build a brief from the verified posting, the company's recent public news, hiring signals, the candidate's evidence bank and `profile_and_criteria.md`, using `references/interview_prep.md`. Use only achievements from the CV. Mark anything about the company you couldn't verify.
+
+### 10C. Application materials (PREPARE)
+
+Only for an application the candidate authorised. Follow section 5 of `references/market_learning.md`: order the CV and cover letter by what this posting asks for first, use the employer's vocabulary only where the CV supports it, never imply a missing requirement, write in the language of the posting, and list every change against the master CV so the candidate can check it. Name the `cv_version` and `angle` so the outcome can be learned from.
+
+### 10D. Market learning
+
+The radar learns what employers in the candidate's target roles ask for and which presentation of their real experience gets responses. Read `references/market_learning.md` the first time this applies in a session.
+
+- For each verified opening scoring 65 or more, and each application, add its requirements to `market_demand.csv` with the employer's wording and the candidate's coverage (`shown`, `buried`, `missing`).
+- At the end of a run, recompute the patterns (at least 3 openings from 2 companies) and the response rates by angle, CV version and channel (at least 5 applications per variant before comparing), and update `content_playbook.md`.
+- Proposed CV and LinkedIn edits only surface or reword what the CV already supports. Only the candidate edits the master CV.
+- The learning is advisory: it never changes the scoring on its own.
 
 ---
 
