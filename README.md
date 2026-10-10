@@ -68,17 +68,24 @@ gemini extensions install https://github.com/marotorod/hidden-job-market-radar
 
 Restart Gemini CLI, check that the skill is listed with `/skills`, then say *"Set up my job search radar"*. Update later with `gemini extensions update hidden-job-market-radar`. Gemini CLI has no scheduled tasks, so run the radar yourself on your chosen day. To let the radar read your job alerts, add an email MCP server (for example Gmail) to your Gemini CLI settings; without one it skips the inbox step.
 
-### Gemini app (gemini.google.com), as a Gem
-
-The Gemini app doesn't load skills, but a Gem can run the radar:
+### Gemini app (gemini.google.com), as a skill
 
 1. Download **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)** and unzip it.
+2. Inside the unzipped `hidden-job-market-radar` folder, delete the `agents` and `assets` folders: Gemini only accepts PDF, CSV, PY, TXT, MD and image files, and doesn't need them.
+3. In Gemini, open **Skills**, choose **Upload a skill** and select the `hidden-job-market-radar` folder (the one with `SKILL.md` at its top level).
+4. Start a chat and say *"Set up my job search radar"*, or call the skill with `/`.
+
+The Gemini app can't save files between chats, so at the end of each session the radar gives you the content of its files: save them and attach them to your next chat.
+
+### Gemini app, as a Gem
+
+If your account doesn't have Skills yet, a Gem can run the radar:
+
+1. Download and unzip **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)**.
 2. In Gemini, open **Gems → New Gem** and name it *Hidden Job Market Radar*.
 3. In **Instructions**, write: *"Follow SKILL.md from your knowledge files exactly. Read the files in references/ only when SKILL.md says so."*
 4. In **Knowledge**, upload `SKILL.md` and the 7 files in `references/`.
 5. Save, open the Gem and say *"Set up my job search radar"*.
-
-A Gem can't save files between chats, so at the end of each session the radar gives you the content of its files: save them and attach them to your next chat.
 
 ### Claude, as a standalone skill
 
@@ -180,15 +187,22 @@ Las skills de ChatGPT dependen de tu plan y, si usas un espacio de trabajo, de l
 
 **Gemini CLI**: `gemini extensions install https://github.com/marotorod/hidden-job-market-radar`, reinicia Gemini CLI y comprueba con `/skills` que aparece. No tiene tareas programadas: ejecuta el radar tú mismo el día que elijas. Para leer tus alertas de empleo, añade un servidor MCP de correo (por ejemplo Gmail) en la configuración de Gemini CLI.
 
-**App de Gemini (gemini.google.com), como Gem**:
+**App de Gemini (gemini.google.com), como habilidad**:
+
+1. Descarga y descomprime **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)**.
+2. Dentro de la carpeta `hidden-job-market-radar`, borra las carpetas `agents` y `assets`: Gemini solo acepta archivos PDF, CSV, PY, TXT, MD e imágenes, y no las necesita.
+3. En Gemini, abre **Habilidades**, elige **Sube una habilidad** y selecciona la carpeta `hidden-job-market-radar` (la que tiene `SKILL.md` en su nivel principal).
+4. Abre un chat y di *"Configura mi radar de empleo"*, o invoca la habilidad con `/`.
+
+La app de Gemini no guarda archivos entre chats: al final de cada sesión el radar te da el contenido de sus archivos para que los guardes y los adjuntes en el siguiente chat.
+
+**App de Gemini, como Gem** (si tu cuenta aún no tiene Habilidades):
 
 1. Descarga y descomprime **[hidden-job-market-radar.zip](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.zip)**.
 2. En Gemini, abre **Gems → Nuevo Gem** y llámalo *Hidden Job Market Radar*.
 3. En **Instrucciones**, escribe: *"Sigue al pie de la letra SKILL.md de tus archivos de conocimiento. Lee los archivos de references/ solo cuando SKILL.md lo indique."*
 4. En **Conocimiento**, sube `SKILL.md` y los 7 archivos de `references/`.
 5. Guarda, abre el Gem y di *"Configura mi radar de empleo"*.
-
-Un Gem no guarda archivos entre chats: al final de cada sesión el radar te da el contenido de sus archivos para que los guardes y los adjuntes en el siguiente chat.
 
 **Claude, como skill independiente**: descarga **[hidden-job-market-radar.skill](https://github.com/marotorod/hidden-job-market-radar/releases/download/skill-latest/hidden-job-market-radar.skill)** y súbelo en Claude en **Personalización → Skills**. Si tenías una versión anterior (por ejemplo `career-intelligence-radar`), elimínala antes para que solo funcione una.
 
